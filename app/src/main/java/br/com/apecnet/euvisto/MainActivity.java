@@ -15,6 +15,7 @@ import com.google.zxing.integration.android.IntentResult;
 public class MainActivity extends AppCompatActivity {
 
     private Button readtag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 IntentIntegrator integrator = new IntentIntegrator((activity));
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
                 integrator.setPrompt("Leitura de Etiqueta QR");
+                integrator.setOrientationLocked(false);
                 integrator.setCameraId(0);
                 integrator.setBeepEnabled(false);
                 integrator.setBarcodeImageEnabled(false);
@@ -34,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
@@ -49,5 +50,10 @@ public class MainActivity extends AppCompatActivity {
         else{
             super.onActivityResult(requestCode, resultCode, data);
         }
+    }
+
+    public void openInTag(View view) {
+        Intent intent = new Intent(this, IntagActivity.class);
+        startActivity(intent);
     }
 }

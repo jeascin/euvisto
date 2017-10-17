@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">EUVISTO</string>
+
+    <string name="peca_prompt">Tipo da Peça</string>
+
+    <string-array name="peca_arrays">
+        <item>Camisa</item>
+        <item>Calça</item>
+        <item>Short</item>
+        <item>Vestido</item>
+    </string-array>
+
+    <string name="cores_prompt">Cor da Peça</string>
+
+    <string-array name="cores_arrays">
+        <item>Branco</item>
+        <item>Preto</item>
+        <item>Amarelo</item>
+        <item>Verde</item>
+        <item>Vermelho</item>
+        <item>Lilas</item>
+    </string-array>
+
+    <string name="textura_prompt">Textura da Peça</string>
+
+    <string-array name="textura_arrays">
+        <item>Nenhuma</item>
+        <item>Xadrês</item>
+        <item>Listras Verticais</item>
+        <item>Listras Horizontais</item>
+        <item>Imagem</item>
+        <item>Padrão de Imagens</item>
+    </string-array>
+
+    <string name="estilo_prompt">Estilo da Peça</string>
+
+    <string-array name="estilo_arrays">
+        <item>Social</item>
+        <item>Casual</item>
+        <item>Festas</item>
+        <item>Eventos Sociais</item>
+    </string-array>
+
+
 </resources>
