@@ -4,6 +4,7 @@
     <string name="peca_prompt">Tipo da Peça</string>
 
     <string-array name="peca_arrays">
+        <item>PEÇA</item>
         <item>Camisa</item>
         <item>Calça</item>
         <item>Short</item>
@@ -13,6 +14,7 @@
     <string name="cores_prompt">Cor da Peça</string>
 
     <string-array name="cores_arrays">
+        <item>COR</item>
         <item>Branco</item>
         <item>Preto</item>
         <item>Amarelo</item>
@@ -24,6 +26,7 @@
     <string name="textura_prompt">Textura da Peça</string>
 
     <string-array name="textura_arrays">
+        <item>TEXTURA</item>
         <item>Nenhuma</item>
         <item>Xadrês</item>
         <item>Listras Verticais</item>
@@ -35,6 +38,7 @@
     <string name="estilo_prompt">Estilo da Peça</string>
 
     <string-array name="estilo_arrays">
+        <item>ESTILO</item>
         <item>Social</item>
         <item>Casual</item>
         <item>Festas</item>

@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:visibility="visible">
+    android:visibility="visible"
+    android:gravity="center"
+    android:background="@color/colorWhite">
 
     <TextView
         android:id="@+id/tagtext"
@@ -12,9 +14,10 @@
         android:text="Cadastrar etiquetas"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textStyle="bold"
         android:padding="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <Spinner
         android:id="@+id/peca"
@@ -24,8 +27,8 @@
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
         android:padding="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <Spinner
         android:id="@+id/cores"
@@ -35,8 +38,8 @@
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
         android:padding="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <Spinner
         android:id="@+id/textura"
@@ -46,8 +49,8 @@
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
         android:padding="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <Spinner
         android:id="@+id/estilo"
@@ -57,8 +60,8 @@
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
         android:padding="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <EditText
         android:id="@+id/descricao"
@@ -69,8 +72,8 @@
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
         android:padding="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <Button
         android:id="@+id/addfoto"
@@ -79,8 +82,8 @@
         android:text="Adicionar foto"
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <Button
         android:id="@+id/regtag"
@@ -89,8 +92,8 @@
         android:text="Cadastrar Etiqueta"
         android:background="@drawable/shapeborda"
         android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <EditText
         android:id="@+id/backmain"
