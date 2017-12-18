@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntagActivity"></activity>
+        <activity android:name=".IntagActivity" />
+        <activity
+            android:name=".ExibeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".VisualizaActivity"></activity>
     </application>
 
 </manifest>

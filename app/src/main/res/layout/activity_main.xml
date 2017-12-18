@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorWhite"
     android:weightSum="1">
@@ -13,41 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="EU VISTO - LOGOMARCA DO LEITOR DE ETIQUETA QR"
         app:srcCompat="@drawable/euvisto"
-        android:layout_weight="0.14" />
+        android:layout_weight="0.24" />
 
     <Button
         android:id="@+id/readtag"
-        android:padding="20dp"
-        android:layout_margin="15dp"
-        android:textSize="24sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textSize="40sp"
         android:background="@drawable/shapeborda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="Realizar a leitura da etiqueta QR"
         android:layout_gravity="center_horizontal"
-        android:text="LER ETIQUETA" />
-    <Button
-        android:id="@+id/intag"
-        android:onClick="openInTag"
-        android:padding="20dp"
-        android:layout_margin="15dp"
-        android:textSize="24sp"
-        android:background="@drawable/shapeborda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="CADASTRAR ETIQUETA" />
-    <Button
-        android:id="@+id/viewtag"
-        android:padding="20dp"
-        android:layout_margin="15dp"
-        android:textSize="24sp"
-        android:background="@drawable/shapeborda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="MINHAS ETIQUETAS" />
+        android:text="LER ETIQUETA QR"
+        android:layout_weight="1.87" />
 
 
 </LinearLayout>

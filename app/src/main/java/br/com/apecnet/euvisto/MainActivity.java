@@ -2,7 +2,6 @@ package br.com.apecnet.euvisto;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         readtag = (Button) findViewById(R.id.readtag);
         final Activity activity = this;
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 IntentIntegrator integrator = new IntentIntegrator((activity));
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-                integrator.setPrompt("Leitura de Etiqueta QR");
-                integrator.setOrientationLocked(false);
+                integrator.setOrientationLocked(true);
                 integrator.setCameraId(0);
-                integrator.setBeepEnabled(false);
+                integrator.setPrompt("");
+                integrator.setBeepEnabled(true);
                 integrator.setBarcodeImageEnabled(false);
                 integrator.initiateScan();
             }
@@ -44,7 +44,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Leitura de Etiqueta Cancelada", Toast.LENGTH_LONG).show();
             }
             else{
-                Toast.makeText(this,result.getContents(), Toast.LENGTH_LONG).show();
+                String leitura = result.getContents();
+                //String texto = "Quantidade: "+qtdInfo(leitura);
+                String texto =dadosTag(leitura);
+                //Toast.makeText(this,texto1, Toast.LENGTH_LONG).show();
+                //Intent intent = new Intent(this, VisualizaActivity.class);
+                //startActivity(intent);
+                Bundle bundle = new Bundle();
+                bundle.putString("itens", texto);
+                Intent intent = new Intent(this, VisualizaActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         }
         else{
@@ -52,8 +62,41 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void openInTag(View view) {
-        Intent intent = new Intent(this, IntagActivity.class);
-        startActivity(intent);
+    int qtdInfo(String txt)
+    {
+        int qtd = 0;
+
+        for(int a=0;a<txt.length();a++)
+        {
+            if (txt.charAt(a)==';')
+            {
+                qtd+=1;
+            }
+
+
+        }
+
+        return qtd;
     }
+
+    public String dadosTag (String lista)
+    {
+        String etiqueta="";
+        for(int a=0;a<lista.length();a++)
+        {
+            if (lista.charAt(a)==';')
+            {
+                etiqueta+="\n\n\n";
+            }
+            else
+            {
+                etiqueta+=lista.charAt(a);
+            }
+
+        }
+        return etiqueta;
+    }
+
+
+
 }
